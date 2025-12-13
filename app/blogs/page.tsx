@@ -1,11 +1,11 @@
 import React from 'react'
 import Hero from "./hero";
-import Blogs from './bloglist';
+//import Blogs from './bloglist';
 const page = () => {
   return (
     <div>
         <Hero/>
-        <Blogs/>
+        {/* <Blogs/> */}
     </div>
   )
 }

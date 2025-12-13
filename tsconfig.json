@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "app/api/blog/add/route.ts.td", "app/api/blog/get/route.ts", "app/api/blog/add/route.tda"  ],
   "exclude": ["node_modules"]
 }
