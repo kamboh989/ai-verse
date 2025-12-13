@@ -4,8 +4,11 @@ import { useState } from "react";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaBars, FaTimes } from "react-icons/fa";
 import Link from "next/link";
 
+import { FaChevronDown } from "react-icons/fa";
+
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [openProjects, setOpenProjects] = useState(false);
   
 
   return (
@@ -112,19 +115,33 @@ export default function Navbar() {
     <a href="#service" className="py-2 text-white hover:text-blue-400">Services</a>
     <a href="/pos" className="py-2 text-white hover:text-blue-400">Swift POS</a>
     
-          {/* Projects Dropdown */}
-<li className="relative group">
-  <a  className="hover:text-blue-400">Projects</a>
+          {/* Projects Dropdown - Mobile */}
+<div>
+  <button
+    onClick={() => setOpenProjects(!openProjects)}
+    className="flex items-center justify-between w-full py-2 text-white cursor-pointer"
+  >
+    <span>Projects</span>
+    <FaChevronDown
+      className={`transition-transform duration-300 ${
+        openProjects ? "rotate-180" : ""
+      }`}
+    />
+  </button>
 
-  {/* Dropdown */}
-  <ul className="absolute left-0 mt-2 w-40 bg-black text-gray-300 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300">
-    <li>
-      <a href="/projects/3d-animation" className="block px-4 py-2 hover:text-blue-400">
-        3d Animation
+  {openProjects && (
+    <div className="ml-4 mt-2 space-y-2 cursor-pointer">
+      <a
+        href="/projects/3d-animation"
+        className="block text-gray-300 hover:text-blue-400"
+        onClick={() => setMenuOpen(false)}
+      >
+        3D Animation
       </a>
-    </li>
-  </ul>
-</li>
+    </div>
+  )}
+</div>
+
    
     <a href="/contact-us" className="py-2 text-white hover:text-blue-400">Contact Us</a>
     <a href="/blogs" className="py-2 text-white hover:text-blue-400">Blog</a>
