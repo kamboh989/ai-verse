@@ -5,7 +5,7 @@ const PrivacyPolicy: FC = () => {
     <div className="w-full min-h-screen flex flex-col items-center py-12 px-4 md:px-10 mt-6">
 
       {/* Top Badge */}
-      <div className="text-gray-200 font-medium bg-gray-500/80 backdrop-blur-md
+      <div className="text-gray-200 font-medium bg-white/15 backdrop-blur-md
  rounded-full flex items-center gap-3 px-5 py-2 mb-6 shadow-sm">
         <span className="text-[14px] md:text-[16px]">Privacy Policy</span>
       </div>
@@ -98,7 +98,7 @@ interface SectionCardProps {
 }
 
 const SectionCard: FC<SectionCardProps> = ({ title, content, listItems }) => (
-  <div className="bg-gray-600/80 backdrop-blur-md
+  <div className="bg-white/15 backdrop-blur-md
   rounded-2xl p-6 md:p-8 shadow-md hover:shadow-lg transition-shadow duration-300">
     <h2 className="text-gray-100 text-[22px] md:text-[26px] font-semibold mb-3">{title}</h2>
     <p className="text-gray-300 text-[16px] md:text-[17px] leading-relaxed">{content}</p>
