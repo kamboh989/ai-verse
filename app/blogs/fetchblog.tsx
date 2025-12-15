@@ -1,4 +1,4 @@
-"use client";
+// fetchblog.tsx
 import { useEffect, useState } from "react";
 
 export interface Blog {
@@ -16,14 +16,19 @@ export function useBlogs(category: string) {
   useEffect(() => {
     async function fetchBlogs() {
       setLoading(true);
-      const res = await fetch(`/api/blog/get?category=${category}`);
-      const data = await res.json();
-      setBlogs(data);
+      try {
+        const res = await fetch(`/api/blog/get?category=${category}`);
+        const data = await res.json();
+        setBlogs(Array.isArray(data) ? data : []); // ✅ safe check
+      } catch (err) {
+        console.error("Error fetching blogs:", err);
+        setBlogs([]);
+      }
       setLoading(false);
     }
 
     fetchBlogs();
-  }, [category]); // ✅ correct dependency
+  }, [category]);
 
   return { blogs, loading };
 }
