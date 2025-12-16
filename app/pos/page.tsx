@@ -1,4 +1,4 @@
-'use client'
+
 import React from 'react'
 import {SpotlightNewDemo} from "./hero";
 import Swiffeature from "./swift-feature";
@@ -8,6 +8,10 @@ import ProcessSection from "./process";
 import Custom from "./customplan";
 import Smart from "./smartplan";
 import Book from "./bookcall";
+import { posSEO } from './seo';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = posSEO;
 
 const page = () => {
   return (

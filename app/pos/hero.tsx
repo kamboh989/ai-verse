@@ -15,6 +15,18 @@ With Swift POS
         <p className="mt-4 font-normal text-base text-neutral-300 max-w-lg text-center mx-auto">
           Swift POS helps retail and restaurant businesses manage billing, inventory, staff, sales analytics, and customer experience — all from one modern, easy-to-use dashboard.
         </p>
+       <div className="flex justify-center mt-6">
+  <a
+    href="https://swiftpos.solutions/business/register"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="px-6 py-2 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 text-white font-semibold rounded-full shadow-md hover:scale-105 hover:shadow-lg transition transform inline-block"
+  >
+    Start Free Trial
+  </a>
+</div>
+
+
       </div>
     </div>
   );

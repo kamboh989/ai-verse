@@ -46,7 +46,7 @@ export default function AgencySection() {
       {/* LEFT CONTENT */}
       <div className={`lg:w-1/2 ${!isMobile ? "sticky top-20 h-fit pb-10" : "mb-10"}`}>
         <h2 className="text-lg tracking-widest mb-4" style={{ color: "#27aae1" }}>ABOUT AGENCY</h2>
-        <h1 className="text-5xl font-bold leading-tight mb-6">
+        <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
           Crafting <span style={{ color: "#27aae1" }}>unique digital</span> experiences<br />
           that elevate your brand
         </h1>

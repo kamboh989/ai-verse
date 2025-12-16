@@ -1,4 +1,4 @@
-'use client'
+
 import React from 'react'
 
 import { HeroDemo1 } from "./images-slider";
@@ -8,7 +8,11 @@ import   {CircularTestimonialsDemo} from "./image2";
 import Car from "./volce-car";
 import  Jordan  from "./jordan";
 import  ImageReveal  from "./images-tile";
+import { projectsSEO } from '../seo';
+import { Metadata } from 'next';
 
+
+export const metadata: Metadata = projectsSEO
 
 const Page = () => {
   return (

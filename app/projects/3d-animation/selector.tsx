@@ -1,3 +1,4 @@
+'use client'
 import React, { useState, useEffect } from 'react';
 import { FaCampground, FaFire, FaTint, FaHotTub, FaHiking } from 'react-icons/fa';
 

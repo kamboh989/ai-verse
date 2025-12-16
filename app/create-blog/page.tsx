@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function AddBlog() {
   const [title, setTitle] = useState("");
@@ -8,6 +8,41 @@ export default function AddBlog() {
   const [category, setCategory] = useState("");
   const [image, setImage] = useState<File | null>(null);
   const [preview, setPreview] = useState<string | null>(null);
+
+const [authenticated, setAuthenticated] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    // Check cookie first
+    const cookie = document.cookie
+      .split("; ")
+      .find((row) => row.startsWith("admin-auth="));
+
+    if (cookie === "admin-auth=true") {
+      setAuthenticated(true);
+      return;
+    }
+
+    // Prompt for email & password
+    const email = prompt("Enter Admin Email:");
+    const password = prompt("Enter Admin Password:");
+
+    if (email === "aiverse@gmail.com" && password === "abdullah9876@") {
+      document.cookie = "admin-auth=true; path=/";
+      setAuthenticated(true); // now page will render
+    } else {
+      alert("Incorrect Credentials. Redirecting...");
+      setAuthenticated(false);
+      window.location.href = "/"; // ya kisi login page pe redirect
+    }
+  }, []);
+
+  if (authenticated === null) {
+    return <div>Checking Authentication...</div>; // loading while prompt
+  }
+
+  if (!authenticated) {
+    return <div>Unauthorized</div>; // fallback
+  }
 
   async function submitHandler(e: React.FormEvent) {
     e.preventDefault();
@@ -37,10 +72,13 @@ export default function AddBlog() {
     setPreview(null);
   }
 
-  return (
+  return (  <>
+    <div className="flex justify-center mt-5 text-4xl ">
+      <h1>Add new blog</h1>
+    </div>
     <form
       onSubmit={submitHandler}
-      className="max-w-xl mx-auto p-6 flex flex-col gap-4"
+      className="max-w-xl mx-auto p-6 flex flex-col gap-4 mb-20"
     >
       {/* TITLE */}
       <input
@@ -93,9 +131,10 @@ export default function AddBlog() {
         />
       )}
 
-      <button className="bg-black text-white py-2 rounded">
+      <button className="bg-blue-500 text-white py-2 rounded">
         Add Blog
       </button>
     </form>
+    </>
   );
 }

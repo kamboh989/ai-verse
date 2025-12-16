@@ -1,12 +1,9 @@
-import React from 'react'
-import Form from "./demo";
+import Demo from "./demo";
+import { contactSEO } from './seo';
+import { Metadata } from 'next';
 
-const page = () => {
-  return (
-    <div>
-      <Form/>
-    </div>
-  )
+export const metadata: Metadata = contactSEO;
+
+export default function Page() {
+	return <Demo />;
 }
-
-export default page
