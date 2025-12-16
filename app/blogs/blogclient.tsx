@@ -10,7 +10,7 @@ import { Metadata } from 'next';
 export const metadata: Metadata = blogSEO;
 
 const Page = () => {
-  const categories = ["All", "Software Development","Web Development", "UI/UX & Design", "Digital Marketing & SEO", "3D Animation", "Ai Automation", "Wordpress", "Shopify", "Game Development"];
+  const categories = ["All", "Software Development","Web Development", "Graphic Design", "Digital Marketing & SEO", "3D Animation", "Ai Automation", "Wordpress", "Shopify", "Game Development"];
   const [category, setCategory] = useState("All");
 
   // Convert to lowercase for backend
