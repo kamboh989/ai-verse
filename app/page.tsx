@@ -9,6 +9,8 @@ import {HowItWorks} from "./components/how-it-works";
 import Testimonials from "./components/testimonials";
 import {SocialConnect} from './components/connect-with-us';
 import BackgroundPaths from "./components/modern-background-path";
+//import  Team  from "./components/teamlist";
+import Team from "./components/team";
 
 
 const page = () => {
@@ -18,6 +20,7 @@ const page = () => {
       <Hero/>
       <IconCloudDemo/>
       <About/>
+      <Team/>
       <Success/>
       <Service/>
       <HowItWorks/>

@@ -42,7 +42,7 @@ export default function AgencySection() {
   }, []);
 
   return (
-    <section className="w-full flex flex-col lg:flex-row py-20 px-6 lg:px-20 text-white mt-10" id="about">
+    <section className="w-full flex flex-col lg:flex-row py-20 px-6 lg:px-20 text-white mt-10 max-w-8xl mx-auto" id="about">
       {/* LEFT CONTENT */}
       <div className={`lg:w-1/2 ${!isMobile ? "sticky top-20 h-fit pb-10" : "mb-10"}`}>
         <h2 className="text-lg tracking-widest mb-4" style={{ color: "#27aae1" }}>ABOUT AGENCY</h2>
