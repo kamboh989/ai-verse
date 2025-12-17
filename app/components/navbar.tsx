@@ -18,7 +18,7 @@ export default function Navbar() {
        {/* Left: Logo */}
 <Link href="/" className="flex items-center space-x-2 cursor-pointer z-20">
   <img src="/home/ai-verse.png" alt="Logo" className="w-13 h-13 object-contain" />
-  <h1 className="text-2xl font-extrabold cursor-pointer" style={{ color: "#1a1a8f" }}>
+  <h1 className="text-2xl font-extrabold cursor-pointer" style={{ color: "#3d3dd0" }}>
     AI <span style={{ color: "#27aae1" }}>VERSE</span>
   </h1>
 </Link>

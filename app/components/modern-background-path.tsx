@@ -254,7 +254,7 @@ export default function EnhancedBackgroundPaths({
                       initial={{ y: 100, opacity: 0, rotateX: -90 }}
                       animate={{ y: 0, opacity: 1, rotateX: 0 }}
                       transition={{ delay: wordIndex * 0.15 + letterIndex * 0.05, type: "spring", stiffness: 100, damping: 20, duration: 0.8 }}
-                      className="inline-block text-transparent bg-clip-text bg-gradient-to-br from-slate-600 via-slate-700 to-slate-500 dark:from-white dark:via-slate-200 dark:to-slate-400 hover:from-blue-600 hover:to-purple-600 dark:hover:from-blue-400 dark:hover:to-purple-400 transition-all duration-700 cursor-default"
+                      className="inline-block text-transparent bg-clip-text bg-gradient-to-br from-slate-200 via-slate-500 to-slate-400 dark:from-white dark:via-slate-400 dark:to-slate-400 hover:from-blue-600 hover:to-purple-600 dark:hover:from-blue-400 dark:hover:to-purple-400 transition-all duration-700 cursor-default"
                       whileHover={{ scale: 1.05, y: -2 }}
                     >
                       {letter}
@@ -272,7 +272,7 @@ export default function EnhancedBackgroundPaths({
             <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 1.5, duration: 0.8, type: "spring", stiffness: 100 }} className="inline-block group mt-8">
               <Link href="/contact-us" >
               <div className="relative p-[2px] bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 rounded-2xl group-hover:from-blue-600 group-hover:via-purple-600 group-hover:to-pink-200 transition-all duration-300">
-                <Button variant="ghost" size="lg" className="relative rounded-[14px] px-12 py-6 text-lg font-semibold  dark:bg-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-900 dark:text-white transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-2xl border-0 backdrop-blur-sm">
+                <Button variant="ghost" size="lg" className="relative rounded-[14px] px-12 py-6 text-lg font-semibold  dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-900 dark:text-white transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-2xl border-0 backdrop-blur-sm">
                   <motion.span className="flex items-center gap-3" whileHover={{ x: 2 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
                     <span className="relative">
                       Contact Us
